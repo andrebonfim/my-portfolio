@@ -1,10 +1,174 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  text-align: center;
-  padding-top: 50px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d1117; /* GitHub Dark Mode bg */
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #30363d;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #58a6ff;
+}
+
+.links a {
+  color: #c9d1d9;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #58a6ff;
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 0;
+  text-align: center;
+}
+
 h1 {
-  color: #2c3e50;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #58a6ff;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #8b949e;
+  margin-bottom: 20px;
+}
+
+.bio {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+}
+
+/* Tech Stack Icons */
+.tech-stack span {
+  display: inline-block;
+  background: #161b22;
+  padding: 8px 15px;
+  border-radius: 50px;
+  margin: 5px;
+  border: 1px solid #30363d;
+  font-size: 0.9rem;
+}
+
+.tech-stack i {
+  margin-right: 5px;
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 0;
+}
+
+h2 {
+  margin-bottom: 30px;
+  border-left: 4px solid #238636; /* Verde Git */
+  padding-left: 15px;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #58a6ff;
+}
+
+.card h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin-bottom: 15px;
+}
+
+.tags .tag {
+  font-size: 0.75rem;
+  color: #58a6ff;
+  background: rgba(88, 166, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
+
+.secondary {
+  color: #8b949e;
+  cursor: default;
+}
+
+.secondary:hover {
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #8b949e;
+  font-size: 0.8rem;
+  border-top: 1px solid #30363d;
+  margin-top: 40px;
 }

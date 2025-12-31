@@ -6,12 +6,109 @@
     <title>André Bonfim | Portfolio</title>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
   </head>
   <body>
-    <h1>Hello, World! 🚀</h1>
-    <p>Welcome to my professional portfolio powered by Python/Flask.</p>
-    <p>I am a Software Engineering student and IT Technician.</p>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">André.dev</div>
+          <div class="links">
+            <a href="https://github.com/andrebonfim" target="_blank"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+            <a href="mailto:andrebonfim@pm.me"
+              ><i class="fas fa-envelope"></i> Contact</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Hello, I'm <span class="highlight">André Luis Bonfim</span> 👋</h1>
+        <p class="subtitle">Software Engineering Student & IT Technician</p>
+        <p class="bio">
+          Focused on <strong>Backend Development</strong> and Automation.
+          Transitioning from IT Support to building robust systems with Python
+          and SQL.
+        </p>
+        <div class="tech-stack">
+          <span><i class="fab fa-python"></i> Python</span>
+          <span><i class="fas fa-database"></i> SQL</span>
+          <span><i class="fab fa-linux"></i> Linux</span>
+          <span><i class="fab fa-git-alt"></i> Git</span>
+          <span><i class="fab fa-react"></i> React</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="container">
+        <h2>Recent Projects</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>💰 Finanças CLI</h3>
+            <p>
+              A complete CRUD system for personal finance management running on
+              terminal.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQLite</span>
+            </div>
+            <a
+              href="https://github.com/andrebonfim/financas-cli-python"
+              target="_blank"
+              class="btn"
+              >View Code <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="card">
+            <h3>📄 Extrator Prefeitura</h3>
+            <p>
+              Automation script to extract metadata from hundreds of .docx
+              files.
+            </p>
+            <div class="tags">
+              <span class="tag">Pandas</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Data</span>
+            </div>
+            <a
+              href="https://github.com/andrebonfim/extrator-prefeitura"
+              target="_blank"
+              class="btn"
+              >View Code <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="card">
+            <h3>🌐 My Portfolio</h3>
+            <p>
+              This very website! Built to showcase my projects using a Python
+              microframework.
+            </p>
+            <div class="tags">
+              <span class="tag">Flask</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Jinja2</span>
+            </div>
+            <a href="#" class="btn secondary">You are here</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Built with 🐍 Python & Flask by André Bonfim © 2026</p>
+    </footer>
   </body>
 </html>
