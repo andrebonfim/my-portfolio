@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{% block title %}André Luis Bonfim | Portfolio{% endblock %}</title>
+
+  <meta name="description"
+    content="Portfolio of André Luis Bonfim - Software Engineering Student & IT Technician focusing on Python, SQL, and Backend Development." />
+  <meta property="og:title" content="André Luis Bonfim | Backend Developer Portfolio" />
+  <meta property="og:description" content="Check out my projects in Python, SQL, and Automation." />
+  <meta property="og:url" content="https://andrebonfim.me" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">André.dev</div>
+        <div class="links">
+          <a href="https://github.com/andrebonfim" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/andreluisbonfim" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:andrebonfim@pm.me">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
+          <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    {% block content %}
+    {% endblock %}
+
+  </main>
+
+  <footer>
+    <p>Built with 🐍 Python & Flask by André Luis Bonfim © 2026</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
