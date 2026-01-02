@@ -8,6 +8,10 @@
   --accent: #238636; /* Green */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Light Theme (Activated via JS) */
 body.light-mode {
   --bg-color: #f4f4f9;
@@ -60,6 +64,25 @@ nav {
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
   white-space: nowrap;
+}
+
+.logo::after {
+  content: "_";
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--highlight);
+  -webkit-text-fill-color: var(--highlight);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .links {

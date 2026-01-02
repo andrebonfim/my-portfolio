@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -7,7 +9,15 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     # Instead of returning text, we render a template
-    return render_template("index.html")
+    return render_template("index.html", current_year=datetime.now().year)
+
+
+@app.after_request
+def add_header(response):
+    response.headers["X-Built-By"] = "André Luis Bonfim"
+    response.headers["X-Tech-Stack"] = "Python, Flask, Linux"
+    response.headers["X-Job-Status"] = "Open to Work"
+    return response
 
 
 if __name__ == "__main__":
