@@ -49,10 +49,17 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+/* Logo Styling */
 .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: var(--highlight);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(45deg, var(--highlight), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .links {
@@ -195,4 +202,58 @@ footer {
   font-size: 0.8rem;
   border-top: 1px solid var(--border-color);
   margin-top: 40px;
+}
+
+/* --- MOBILE --- */
+
+@media (max-width: 768px) {
+  /* 1. Header Adjustment for small screens */
+  .container {
+    padding: 0 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* 2. Logo Improvement */
+  .logo {
+    font-size: 1.4rem;
+    flex-grow: 1;
+  }
+
+  .links {
+    gap: 15px;
+  }
+
+  .links a {
+    font-size: 0;
+  }
+
+  .links a i {
+    font-size: 1.4rem;
+    display: block;
+    padding: 5px;
+  }
+
+  /* Theme Toggle Alignment */
+  #theme-toggle {
+    font-size: 1.4rem;
+    padding: 5px;
+    margin-left: 5px;
+  }
+
+  /* 4. Hero Section Adjustments */
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
 }
