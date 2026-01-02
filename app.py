@@ -14,7 +14,7 @@ def home():
 
 @app.after_request
 def add_header(response):
-    response.headers["X-Built-By"] = "André Luis Bonfim"
+    response.headers["X-Built-By"] = "Andre Luis Bonfim"
     response.headers["X-Tech-Stack"] = "Python, Flask, Linux"
     response.headers["X-Job-Status"] = "Open to Work"
     return response
